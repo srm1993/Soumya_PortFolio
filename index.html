@@ -30,6 +30,20 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <script type="text/javascript">
+    // Simple obfuscation to deter casual users
+    document.addEventListener("contextmenu", function(e) {
+      e.preventDefault();
+    });
+
+    document.onkeydown = function(e) {
+      if (e.ctrlKey && (e.keyCode === 85 || e.keyCode === 67 || e.keyCode === 83)) {
+        return false;
+      } else {
+        return true;
+      }
+    };
+  </script>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
